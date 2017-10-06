@@ -61,6 +61,7 @@ public class ElasticsearchTweetController {
             ArrayList<NormalTweet> tweets = new ArrayList<NormalTweet>();
 
             // TODO Build the query
+
             String query;
             if (search_parameters[0].equals("")) {
                 query = search_parameters[0];

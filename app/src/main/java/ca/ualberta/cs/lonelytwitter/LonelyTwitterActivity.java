@@ -66,12 +66,13 @@ public class LonelyTwitterActivity extends Activity {
 		searchButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
+				tweetList.clear();
 				setResult(RESULT_OK);
 				String term = bodyText.getText().toString();
                 ElasticsearchTweetController.GetTweetsTask searchTweetsTask = new ElasticsearchTweetController.GetTweetsTask();
                 searchTweetsTask.execute(term);
                 try {
-                    tweetList = searchTweetsTask.get();
+                    tweetList.addAll(searchTweetsTask.get());
                 } catch (Exception e) {
                     Log.i("Error", "Failed to search");
                 }
