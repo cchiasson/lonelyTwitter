@@ -11,7 +11,10 @@ public class TweetList {
     private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
 
     //add tweet to a list of tweets
-    public void addTweet(Tweet tweet) {
+    public void addTweet(Tweet tweet) throws IllegalArgumentException {
+        if (HasTweet(tweet)) {
+            throw new IllegalArgumentException();
+        }
         tweets.add(tweet);
     }
 
@@ -33,5 +36,11 @@ public class TweetList {
     public int GetCount() {
         return tweets.size();
     }
+
+    public ArrayList<Tweet> GetTweets() {
+        private ArrayList<Tweet> sortedTweets = 
+        return sortedTweets;
+    }
+
 
 }
