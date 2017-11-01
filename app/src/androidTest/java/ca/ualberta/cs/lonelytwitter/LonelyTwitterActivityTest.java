@@ -2,12 +2,10 @@ package ca.ualberta.cs.lonelytwitter;
 
 import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;
-import android.text.Editable;
 import android.widget.EditText;
+//removed unused import
 
 import com.robotium.solo.Solo;
-
-import junit.framework.TestCase;
 
 public class LonelyTwitterActivityTest extends ActivityInstrumentationTestCase2<LonelyTwitterActivity> {
     private Solo solo;
